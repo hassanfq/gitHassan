@@ -1,0 +1,135 @@
+See article at https://dronebotworkshop.com/linux-workstation
+
+---Update Linux----
+---Run before installing software----
+
+sudo apt update
+sudo apt upgrade
+
+
+---Remove Caps Lock----
+---Add to Startup Manager----
+
+xmodmap -e "keycode 66 = Shift_L NoSymbol Shift_L"
+
+
+---Install ChaseApp----
+
+sudo snap install chaseapp
+
+
+---Arduino IDE from Snap Store----
+---See article for manual installation details----
+
+sudo snap install arduino
+
+---Arduino IDE Download Move and change folder
+---Check version number of your IDE and change accordingly
+
+sudo mv arduino-1.8.13 /opt
+cd /opt/arduino-1.8.13
+
+---Arduino IDE install
+---Check version number of your IDE and change accordingly
+
+sudo ./install.sh
+
+---Arduino IDE USB Port Fix----
+---Replace <username> with your username----
+---Verify that "dialout" is correct group----
+
+sudo usermod -a -G dialout <username>
+
+
+---Install Visual Studio Code----
+---Add Python3 Virtual Environment first----
+
+sudo apt-get install python3-venv
+sudo snap install --classic code
+
+---Install PyCharm Python Editor----
+
+sudo snap install pycharm-community --classic
+
+
+---Install Thonny IDE Python Editor----
+
+bash <(wget -O - https://thonny.org/installer-for-linux)
+
+
+---Install Geany Text Editor----
+
+sudo apt-get install geany
+
+
+---Install Meld file compare tool----
+
+sudo apt-get install -y meld
+
+
+---Install Balena Etcher USB & SD Card Burner----
+
+echo "deb https://deb.etcher.io stable etcher" | sudo tee /etc/apt/sources.list.d/balena-etcher.list
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61
+sudo apt update
+sudo apt install balena-etcher-electron
+
+
+---Install GitCola Git client----
+
+sudo apt-get install git-cola
+
+
+---Install FileZilla FTP----
+
+sudo apt install filezilla
+
+
+---Install XTerm terminal----
+
+sudo apt-get install -y xterm
+
+
+---Install Angry IP Scanner----
+---Download 64-bit DEB file and install with Ubuntu Installer----
+
+https://angryip.org/download/#linux
+
+
+---Install KiCad PCB Editor----
+
+sudo add-apt-repository --yes ppa:kicad/kicad-5.1-releases
+sudo apt update
+sudo apt install --install-recommends kicad
+
+
+---Install EasyEDA PCB & Schematic Editor----
+---Download install program from https://easyeda.com/page/download
+---Extract and open Terminal in extracted folder
+
+sudo bash install.sh
+
+
+---Install VLC Media Player----
+
+sudo snap install vlc
+
+
+---Install Shutter screen snapshot tool----
+---Optional Gnome Web Photo for web screenshots----
+
+sudo add-apt-repository ppa:linuxuprising/shutter
+sudo apt update
+sudo apt install shutter
+
+sudo apt install gnome-web-photo
+
+
+---Install Peek animated GIF recorder----
+
+sudo add-apt-repository ppa:peek-developers/stable
+sudo apt update
+sudo apt install peek
+
+--- Git hub for Linux Desktop ---
+https://github.com/shiftkey/desktop#debianubuntu-distributions
